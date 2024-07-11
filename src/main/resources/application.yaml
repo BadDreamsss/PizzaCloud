@@ -1,0 +1,23 @@
+spring:
+  application:
+    name: PizzaCloud
+    data:
+      rest:
+        base-path: /data-api
+  thymeleaf:
+    cache: false
+  datasource:
+    name: postgres
+    username: postgres
+    password: rootroot
+    url: jdbc:postgresql://localhost:5432/postgres
+    hikari:
+      driver-class-name: org.postgresql.Driver
+sql:
+  init:
+    mode: always
+    data-locations: classpath:data.sql
+server:
+  error:
+    include-exception: true
+    include-stacktrace: always
